@@ -44,7 +44,7 @@
     "@growi/sdk-typescript": "^1.8.0",
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^20.11.30",
-    "@vercel/ncc": "^0.38.3",
+    "@vercel/ncc": "^0.45.0",
     "@vitest/coverage-v8": "^3.2.4",
     "cross-env": "^7.0.3",
     "ky": "^1.8.2",
