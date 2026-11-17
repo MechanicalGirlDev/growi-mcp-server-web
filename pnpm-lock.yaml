@@ -34,8 +34,8 @@ importers:
         specifier: ^20.11.30
         version: 20.19.43
       '@vercel/ncc':
-        specifier: ^0.38.3
-        version: 0.38.4
+        specifier: ^0.45.0
+        version: 0.45.0
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.7(vitest@3.2.7(@types/node@20.19.43)(tsx@4.23.15))
@@ -690,8 +690,8 @@ packages:
   '@types/node@20.19.43':
     resolution: {integrity: sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==}
 
-  '@vercel/ncc@0.38.4':
-    resolution: {integrity: sha512-8LwjnlP39s08C08J5NstzriPvW1SP8Zfpp1BvC2sI35kPeZnHfxVkCwu4/+Wodgnd60UtT1n8K8zw+Mp7J9JmQ==}
+  '@vercel/ncc@0.45.0':
+    resolution: {integrity: sha512-8zPi1yO2mHpoKTD+e+Bf0ZT3e+sWHSOyGapm9s7b5R0gxJi3CiFTqmeQiMEyu6ejrz2s09M8JkEoUaTWjBJPQQ==}
     hasBin: true
 
   '@vitest/coverage-v8@3.2.7':
@@ -2330,7 +2330,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@vercel/ncc@0.38.4': {}
+  '@vercel/ncc@0.45.0': {}
 
   '@vitest/coverage-v8@3.2.7(vitest@3.2.7(@types/node@20.19.43)(tsx@4.23.15))':
     dependencies:
