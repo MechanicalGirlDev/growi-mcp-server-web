@@ -22,8 +22,8 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
       '@growi/core':
-        specifier: ^1.5.0
-        version: 1.6.0
+        specifier: ^3.0.0
+        version: 3.2.0
       '@growi/sdk-typescript':
         specifier: ^1.8.0
         version: 1.14.0
@@ -463,8 +463,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@growi/core@1.6.0':
-    resolution: {integrity: sha512-rF5zhhgspPYaTiUgrqu3SPfLEbCExlP6T8gUX/l10jeGfeKkZJYHGAWkle7+O6c7/a2Wia3GtEj33p70lkq77Q==}
+  '@growi/core@3.2.0':
+    resolution: {integrity: sha512-qJZVyFtfZNV+BzuXWO+981g0ec1a/GOvdyf+V1ZW64rz9vmHRQb6XULvNWB1uyUGbsKgkYuHi93MGUUQ9NNkUA==}
 
   '@growi/sdk-typescript@1.14.0':
     resolution: {integrity: sha512-3aRyNINmMX7ph+PrtiXVhAiMztVyVJeNzW05HB4uiRcGZNndV3gwkBlqw0IdzcPIiZdl+711g44B32CBpNMuxA==}
@@ -1022,10 +1022,6 @@ packages:
 
   escape-html@1.0.3:
     resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
-
-  escape-string-regexp@4.0.0:
-    resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
-    engines: {node: '>=10'}
 
   estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
@@ -2174,10 +2170,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@growi/core@1.6.0':
+  '@growi/core@3.2.0':
     dependencies:
       bson-objectid: 2.0.4
-      escape-string-regexp: 4.0.0
 
   '@growi/sdk-typescript@1.14.0':
     dependencies:
@@ -2749,8 +2744,6 @@ snapshots:
   escalade@3.2.0: {}
 
   escape-html@1.0.3: {}
-
-  escape-string-regexp@4.0.0: {}
 
   estree-walker@3.0.3:
     dependencies:
