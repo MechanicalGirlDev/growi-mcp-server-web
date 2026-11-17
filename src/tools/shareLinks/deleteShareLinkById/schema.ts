@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const deleteShareLinkByIdParamSchema = z.object({
   id: z.string().describe('Share link ID to delete'),

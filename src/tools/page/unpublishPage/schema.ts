@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const unpublishPageParamSchema = z.object({
   pageId: z.string().min(1, 'Page ID is required'),

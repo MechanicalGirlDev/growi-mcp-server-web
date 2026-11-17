@@ -1,6 +1,6 @@
 import dotenvFlow from 'dotenv-flow';
 import { z } from 'zod';
-import type { Config, GrowiAppConfig } from './types';
+import type { Config, GrowiAppConfig } from './types.js';
 
 const GROWI_APP_NAME_PREFIX = 'GROWI_APP_NAME_';
 const GROWI_BASE_URL_PREFIX = 'GROWI_BASE_URL_';
@@ -55,7 +55,7 @@ const envSchema = z
 
     return {
       appConfigs,
-      defaultAppName: env.GROWI_DEFAULT_APP_NAME?.toString().trim(),
+      ...(env.GROWI_DEFAULT_APP_NAME === undefined ? {} : { defaultAppName: env.GROWI_DEFAULT_APP_NAME.trim() }),
     };
   })
   .pipe(

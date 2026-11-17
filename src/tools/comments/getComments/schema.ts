@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const getCommentsParamSchema = z.object({
   pageId: z.string().describe('ID of the page to get comments for'),

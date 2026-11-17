@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 const deleteOptionsSchema = z.object({
   isCompletely: z.boolean(),
@@ -10,7 +10,7 @@ const deleteOptionsSchema = z.object({
  * Schema for request parameters - Common for both v1 and v3
  */
 export const deletePagesParamSchema = z.object({
-  pageIdToRevisionIdMap: z.record(z.string()).describe('Map of page IDs to their revision IDs'),
+  pageIdToRevisionIdMap: z.record(z.string(), z.string()).describe('Map of page IDs to their revision IDs'),
   isCompletely: z.boolean().optional().describe('Whether to completely delete the pages'),
   isRecursively: z.boolean().optional().describe('Whether to delete child pages recursively'),
   isAnyoneWithTheLink: z.boolean().optional().describe('Whether to delete pages accessible by anyone with the link'),

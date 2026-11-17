@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const getUserRecentPagesParamSchema = z.object({
   id: z.string().describe('User ID to get recent pages for'),

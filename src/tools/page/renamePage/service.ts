@@ -1,5 +1,5 @@
-import apiv3 from '@growi/sdk-typescript/v3';
 import type { PutRenameForPages200 } from '@growi/sdk-typescript/v3';
+import apiv3 from '@growi/sdk-typescript/v3';
 import { GrowiApiError } from '../../../commons/api/growi-api-error.js';
 import type { RenamePageParam } from './schema.js';
 

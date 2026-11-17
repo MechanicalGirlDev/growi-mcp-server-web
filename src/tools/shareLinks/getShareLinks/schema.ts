@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const getShareLinksParamSchema = z.object({
   relatedPage: z.string().describe('Page ID to get share links for'),

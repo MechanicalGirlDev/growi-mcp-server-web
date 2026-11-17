@@ -5,6 +5,7 @@ GROWI WikiにAIモデルを接続するためのModel Context Protocol (MCP) HTT
 ## 機能
 
 ### ページ操作
+
 - `getPage` - ページ内容の取得
 - `getPageInfo` - ページ情報の取得
 - `createPage` - ページの作成
@@ -19,24 +20,29 @@ GROWI WikiにAIモデルを接続するためのModel Context Protocol (MCP) HTT
 - `publishPage` / `unpublishPage` - ページの公開/非公開
 
 ### タグ操作
+
 - `getTagList` - タグ一覧の取得
 - `searchTags` - タグの検索
 - `updateTag` - タグの更新
 - `getPageTag` - ページのタグ取得
 
 ### リビジョン操作
+
 - `listRevisions` - リビジョン一覧の取得
 - `getRevision` - リビジョンの取得
 
 ### 共有リンク操作
+
 - `getShareLinks` - 共有リンク一覧の取得
 - `createShareLink` - 共有リンクの作成
 - `deleteShareLink` - 共有リンクの削除
 
 ### コメント操作
+
 - `getComments` - コメントの取得
 
 ### ユーザー操作
+
 - `getUserRecentPages` - ユーザーの最近のページ取得
 
 ## セットアップ
@@ -49,15 +55,15 @@ GROWI WikiにAIモデルを接続するためのModel Context Protocol (MCP) HTT
 cp .env.example .env
 ```
 
-| 変数名 | 説明 | 例 |
-|--------|------|-----|
-| `MCP_HTTP_PORT` | サーバーポート | `3001` |
-| `MCP_HTTP_HOST` | リッスンホスト | `0.0.0.0` |
-| `MCP_AUTH_TOKENS` | Bearer認証トークン (32文字以上、カンマ区切りで複数可) | `your-secure-token...` |
-| `GROWI_DEFAULT_APP_NAME` | デフォルトのGROWIアプリ名 | `app-1` |
-| `GROWI_APP_NAME_N` | GROWIアプリ名 (N=1,2,3...) | `app-1` |
-| `GROWI_API_TOKEN_N` | GROWI APIトークン | `8991502f6dfec...` |
-| `GROWI_BASE_URL_N` | GROWI URL | `http://localhost:3000` |
+| 変数名                   | 説明                                                  | 例                      |
+| ------------------------ | ----------------------------------------------------- | ----------------------- |
+| `MCP_HTTP_PORT`          | サーバーポート                                        | `3001`                  |
+| `MCP_HTTP_HOST`          | リッスンホスト                                        | `0.0.0.0`               |
+| `MCP_AUTH_TOKENS`        | Bearer認証トークン (32文字以上、カンマ区切りで複数可) | `your-secure-token...`  |
+| `GROWI_DEFAULT_APP_NAME` | デフォルトのGROWIアプリ名                             | `app-1`                 |
+| `GROWI_APP_NAME_N`       | GROWIアプリ名 (N=1,2,3...)                            | `app-1`                 |
+| `GROWI_API_TOKEN_N`      | GROWI APIトークン                                     | `8991502f6dfec...`      |
+| `GROWI_BASE_URL_N`       | GROWI URL                                             | `http://localhost:3000` |
 
 ## 起動方法
 
@@ -78,12 +84,14 @@ Cloudflare Tunnelを使用して、自己署名証明書なしでHTTPSアクセ�
    - URL: `growi-mcp:3001`
 
 3. `.env`を設定：
+
    ```bash
    cp .env.example .env
    # CLOUDFLARE_TUNNEL_TOKEN にトークンを設定
    ```
 
 4. 起動：
+
    ```bash
    docker compose up -d
    ```

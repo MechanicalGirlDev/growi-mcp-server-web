@@ -1,7 +1,7 @@
-import apiv3 from '@growi/sdk-typescript/v3';
 import type { Page } from '@growi/sdk-typescript/v3';
-import { GrowiApiError } from '../../../commons/api/growi-api-error';
-import type { DuplicatePageParams } from './schema';
+import apiv3 from '@growi/sdk-typescript/v3';
+import { GrowiApiError } from '../../../commons/api/growi-api-error.js';
+import type { DuplicatePageParams } from './schema.js';
 
 export const duplicatePage = async (params: DuplicatePageParams, appName: string): Promise<Page> => {
   try {

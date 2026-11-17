@@ -1,19 +1,19 @@
 import type { AnyFastMCP } from '../commons/types.js';
-import { registerCreatePageTool } from './createPage';
-import { registerDeletePagesTool } from './deletePages';
-import { registerDuplicatePageTool } from './duplicatePages';
-import { registerGetPageTool } from './getPage';
-import { registerGetPageInfoTool } from './getPageInfo';
-import { registerGetPageListingChildrenTool } from './getPageListingChildren';
-import { registerGetPageListingRootTool } from './getPageListingRoot';
-import { registerGetPageTagTool } from './getPageTag';
-import { registerGetRecentPagesTool } from './getRecentPages';
-import { registerPageListingInfoTool } from './pageListingInfo';
-import { registerPublishPageTool } from './publishPage';
-import { registerRenamePageTool } from './renamePage';
-import { registerSearchPagesTool } from './searchPages';
-import { registerUnpublishPageTool } from './unpublishPage';
-import { registerUpdatePageTool } from './updatePage';
+import { registerCreatePageTool } from './createPage/index.js';
+import { registerDeletePagesTool } from './deletePages/index.js';
+import { registerDuplicatePageTool } from './duplicatePages/index.js';
+import { registerGetPageTool } from './getPage/index.js';
+import { registerGetPageInfoTool } from './getPageInfo/index.js';
+import { registerGetPageListingChildrenTool } from './getPageListingChildren/index.js';
+import { registerGetPageListingRootTool } from './getPageListingRoot/index.js';
+import { registerGetPageTagTool } from './getPageTag/index.js';
+import { registerGetRecentPagesTool } from './getRecentPages/index.js';
+import { registerPageListingInfoTool } from './pageListingInfo/index.js';
+import { registerPublishPageTool } from './publishPage/index.js';
+import { registerRenamePageTool } from './renamePage/index.js';
+import { registerSearchPagesTool } from './searchPages/index.js';
+import { registerUnpublishPageTool } from './unpublishPage/index.js';
+import { registerUpdatePageTool } from './updatePage/index.js';
 
 export async function loadPageTools(server: AnyFastMCP): Promise<void> {
   registerCreatePageTool(server);

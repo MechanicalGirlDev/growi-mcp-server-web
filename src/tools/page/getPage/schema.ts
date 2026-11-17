@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const getPageParamSchema = z.object({
   pageId: z.string().optional().describe('ID of the GROWI page'),

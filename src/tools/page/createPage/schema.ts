@@ -1,6 +1,6 @@
 import type { PostPageBody } from '@growi/sdk-typescript/v3';
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const createPageParamSchema = z.object({
   path: z.string(),

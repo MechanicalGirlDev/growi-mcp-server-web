@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const getRecentPagesParamSchema = z.object({
   limit: z.number().optional().describe('Number of pages to retrieve per page (optional)'),

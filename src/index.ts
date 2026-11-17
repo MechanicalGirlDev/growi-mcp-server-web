@@ -22,13 +22,13 @@ const server = new FastMCP({
  * Initialize Axios instances for all GROWI apps.
  */
 const setupAxiosInstance = async (apps: Map<string, GrowiAppConfig>): Promise<void> => {
-  Array.from(apps.values()).map((app) => {
+  for (const app of apps.values()) {
     axiosInstanceManager.addAxiosInstance({
       appName: app.name,
       baseURL: app.baseUrl,
       token: app.apiToken,
     });
-  });
+  }
 };
 
 async function main(): Promise<void> {

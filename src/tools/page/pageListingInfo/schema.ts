@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const pageListingInfoParamSchema = z.object({
   pageIds: z.array(z.string()).optional().describe('Array of page IDs to get summary information for (One of `pageIds` or `path` must be provided)'),

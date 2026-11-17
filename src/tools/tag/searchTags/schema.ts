@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const searchTagsParamSchema = z.object({
   q: z.string().optional().describe('Search query for tags (optional)'),

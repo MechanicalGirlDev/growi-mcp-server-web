@@ -1,1 +1,1 @@
-export { registerGetPageTool } from './register';
+export { registerGetPageTool } from './register.js';

@@ -1,7 +1,7 @@
 import type { AnyFastMCP } from '../commons/types.js';
-import { registerGetTagListTool } from './getTagList';
-import { registerSearchTagsTool } from './searchTags';
-import { registerUpdateTagTool } from './updateTag';
+import { registerGetTagListTool } from './getTagList/index.js';
+import { registerSearchTagsTool } from './searchTags/index.js';
+import { registerUpdateTagTool } from './updateTag/index.js';
 
 export async function loadTagTools(server: AnyFastMCP): Promise<void> {
   registerUpdateTagTool(server);

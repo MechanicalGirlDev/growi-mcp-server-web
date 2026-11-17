@@ -30,7 +30,7 @@ export function registerPageListingInfoTool(server: AnyFastMCP): void {
         // Handle validation errors
         if (error instanceof z.ZodError) {
           throw new UserError('Invalid parameters provided', {
-            validationErrors: error.errors,
+            validationErrors: error.issues,
           });
         }
 

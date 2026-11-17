@@ -1,6 +1,6 @@
 import type { PutPageBody } from '@growi/sdk-typescript/v3';
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const updatePageParamSchema = z.object({
   pageId: z.string().describe('ID of the page to update'),

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const deleteShareLinksParamSchema = z.object({
   relatedPage: z.string().describe('Page ID to delete all share links for'),

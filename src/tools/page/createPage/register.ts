@@ -18,7 +18,7 @@ export function registerCreatePageTool(server: AnyFastMCP): void {
       openWorldHint: true,
       title: 'Create Page',
     },
-    execute: async (params, context) => {
+    execute: async (params) => {
       try {
         // Validate input using zod schema
         const validatedParams = createPageParamSchema.parse(params);
@@ -36,7 +36,7 @@ export function registerCreatePageTool(server: AnyFastMCP): void {
         // Handle zod validation errors
         if (error instanceof ZodError) {
           throw new UserError('Invalid parameters provided', {
-            validationErrors: error.errors,
+            validationErrors: error.issues,
           });
         }
 

@@ -1,7 +1,7 @@
-import apiv1 from '@growi/sdk-typescript/v1';
 import type { RemovePageBody } from '@growi/sdk-typescript/v1';
-import apiv3 from '@growi/sdk-typescript/v3';
+import apiv1 from '@growi/sdk-typescript/v1';
 import type { PostDeleteForPagesBody } from '@growi/sdk-typescript/v3';
+import apiv3 from '@growi/sdk-typescript/v3';
 import { GrowiApiError } from '../../../commons/api/growi-api-error.js';
 import type { DeletePagesParam, DeletePagesResponse } from './schema.js';
 

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 // Root page listing doesn't require any parameters
 export const getPageListingRootParamSchema = z.object({

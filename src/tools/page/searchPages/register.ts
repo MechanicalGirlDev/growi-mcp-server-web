@@ -18,7 +18,7 @@ export function registerSearchPagesTool(server: AnyFastMCP): void {
       openWorldHint: true,
       title: 'Search Pages',
     },
-    execute: async (params, context) => {
+    execute: async (params) => {
       try {
         // Validate input using zod schema
         const { appName, ...searchPagesParams } = searchPagesParamSchema.parse(params);
@@ -42,7 +42,7 @@ export function registerSearchPagesTool(server: AnyFastMCP): void {
         // Handle zod validation errors
         if (error instanceof ZodError) {
           throw new UserError('Invalid parameters provided', {
-            validationErrors: error.errors,
+            validationErrors: error.issues,
           });
         }
 

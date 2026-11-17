@@ -23,9 +23,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "pnpm ncc build ./src/index.ts --license ./LICENSE",
+    "build": "pnpm exec tsc -p tsconfig.build.json && pnpm ncc build ./.build/index.js --license ./LICENSE",
     "prebuild": "pnpm run clean",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist .build",
     "start": "pnpm build && cross-env NODE_ENV=production node dist/index.js",
     "dev": "nodemon --watch src --ext ts,json --exec \"cross-env NODE_ENV=development pnpm tsx src/index.ts\"",
     "lint": "biome check",
@@ -45,7 +45,7 @@
     "@tsconfig/node24": "^24.0.0",
     "@types/node": "^20.11.30",
     "@vercel/ncc": "^0.45.0",
-    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/coverage-v8": "^4.0.0",
     "cross-env": "^10.0.0",
     "ky": "^2.0.0",
     "nodemon": "^3.1.10",

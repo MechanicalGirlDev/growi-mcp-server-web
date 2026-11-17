@@ -29,9 +29,7 @@ function isValidToken(token: string): boolean {
 /**
  * FastMCP authenticate function for Bearer token authentication.
  */
-export async function authenticateBearer(request: {
-  headers: Record<string, string | string[] | undefined>;
-}): Promise<{ authenticated: boolean }> {
+export async function authenticateBearer(request: { headers: Record<string, string | string[] | undefined> }): Promise<{ authenticated: boolean }> {
   const authHeader = request.headers.authorization;
   const authValue = Array.isArray(authHeader) ? authHeader[0] : authHeader;
 

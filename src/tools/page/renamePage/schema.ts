@@ -1,6 +1,6 @@
 import type { IPage } from '@growi/core/dist/interfaces';
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const renamePageParamSchema = z.object({
   pageId: z.string().describe('ID of the page to rename'),

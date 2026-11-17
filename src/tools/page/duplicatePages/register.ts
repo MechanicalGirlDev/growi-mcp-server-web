@@ -1,11 +1,10 @@
 import { UserError } from 'fastmcp';
 import { ZodError } from 'zod';
-import type { AnyFastMCP } from '../../commons/types.js';
-
-import { GrowiApiError } from '../../../commons/api/growi-api-error';
+import { GrowiApiError } from '../../../commons/api/growi-api-error.js';
 import { resolveAppName } from '../../../commons/utils/resolve-app-name.js';
-import { duplicatePageSchema } from './schema';
-import { duplicatePage } from './service';
+import type { AnyFastMCP } from '../../commons/types.js';
+import { duplicatePageSchema } from './schema.js';
+import { duplicatePage } from './service.js';
 
 export const registerDuplicatePageTool = (server: AnyFastMCP): void => {
   server.addTool({
@@ -37,7 +36,7 @@ export const registerDuplicatePageTool = (server: AnyFastMCP): void => {
         // Handle validation errors
         if (error instanceof ZodError) {
           throw new UserError('Invalid parameters', {
-            validationErrors: error.errors,
+            validationErrors: error.issues,
           });
         }
 

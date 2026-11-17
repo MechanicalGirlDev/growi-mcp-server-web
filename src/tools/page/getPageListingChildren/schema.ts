@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { appNameSchema } from '../../commons/app-name-schemas';
+import { appNameSchema } from '../../commons/app-name-schemas.js';
 
 export const getPageListingChildrenParamSchema = z.object({
   id: z.string().optional().describe('Page ID to get children for (optional)'),

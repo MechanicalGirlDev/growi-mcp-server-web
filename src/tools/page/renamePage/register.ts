@@ -24,7 +24,7 @@ export function registerRenamePageTool(server: AnyFastMCP): void {
         // Handle Zod validation errors
         if (error instanceof z.ZodError) {
           throw new UserError('Invalid parameters provided', {
-            validationErrors: error.errors,
+            validationErrors: error.issues,
           });
         }
 
